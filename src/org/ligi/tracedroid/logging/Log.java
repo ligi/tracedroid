@@ -91,8 +91,13 @@ public class Log {
 
 	public synchronized static String getCachedLog() {
 		String res="";
+		int pos_in_arr;
 		for (int i=0;i<log_cache.length;i++)
-			res+=log_cache[(log_cache.length-i+log_cache_pos)%log_cache.length]+"\n";
+			{
+			pos_in_arr=(log_cache.length-i+log_cache_pos-1)%log_cache.length;
+			if (log_cache[pos_in_arr]!=null)
+				res+=""+i + " " + log_cache[pos_in_arr]+"\n";
+			}
 		return res;
 	}
 	
