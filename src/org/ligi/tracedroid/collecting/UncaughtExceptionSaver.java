@@ -49,7 +49,8 @@ public class UncaughtExceptionSaver implements UncaughtExceptionHandler {
 			BufferedWriter bos = new BufferedWriter(new FileWriter(filename));
 			bos.write("Android Version: " + TraceDroidMetaInfo.getAndroidVersion()+ "\n");
 			bos.write("Phone Model: " + TraceDroidMetaInfo.getPhoneModel() + "\n");
-			bos.write("Stacktrace \n: "+ getThrowableStackAsString(throwable));
+			bos.write("Stacktrace: \n "+ getThrowableStackAsString(throwable));
+			bos.write("Log: \n "+ Log.getCachedLog());
 			bos.flush();
 			bos.close();
 
