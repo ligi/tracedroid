@@ -19,6 +19,7 @@
 package org.ligi.tracedroid.sending;
 
 import org.ligi.tracedroid.TraceDroid;
+import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -37,7 +38,7 @@ public class TraceDroidEmailSender {
 							final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 							emailIntent.setType("plain/text");
 							emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{email});
-							emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Crash Report");
+							emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "[TraceDroid Report] " + TraceDroidMetaInfo.getAppPackageName());
 							emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, TraceDroid.getStackTraceText(10));
 							context.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 							TraceDroid.deleteStacktraceFiles();
