@@ -70,4 +70,10 @@ public class TraceDroidMetaInfo {
 	public static String getAppPackageName() {
 		return app_packagename;
 	}
+	
+	public static String getTraceDroidVersion() {
+		return "0.2";
+		// TODO replace a thing like below - was only showing 0.0 on initial tests
+		//return TraceDroidMetaInfo.class.getPackage().getImplementationVersion();
+	}
 }

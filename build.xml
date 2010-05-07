@@ -2,7 +2,7 @@
   <property file="local.properties" />
 
   <property name="filename" 	value="tracedroid.jar"/>
-  <property name="version.num" value="0.0.1" />
+  <property name="version.num" value="0.2" />
   <property name="build.dir" value="./build"/>
   <property name="classes.dir" 	value="${build.dir}/classes"/>
 
