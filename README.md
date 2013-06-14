@@ -1,7 +1,5 @@
-File Edit Options Buffers Tools Help                                                                                                                                       
 tracedroid
 ==========
-----------
 
 why?
 ----
@@ -31,5 +29,9 @@ TraceDroid.init(this);
 TraceDroidEmailSender.sendStackTraces("your@email.org", this);
   </code></pre>
 
+license
+-------
 
-  [1]: http://code.google.com/p/android-remote-stacktrace/
+Tracedroid is licensed with the MIT license ( http://opensource.org/licenses/MIT ) - in short: do what you want with it and it would be nice if you mention the author/project somwhere when you use it. WITHOUT WARRANTY OF ANY KIND
+
+[1]: http://code.google.com/p/android-remote-stacktrace/
