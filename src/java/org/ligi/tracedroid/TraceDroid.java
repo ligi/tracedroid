@@ -1,4 +1,4 @@
-package org.ligi.tracedroid;
+xpackage org.ligi.tracedroid;
 
 import java.io.BufferedReader;
 import java.io.File;
