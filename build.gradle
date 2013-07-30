@@ -20,7 +20,7 @@ sourceSets {
 version = '1.0'
 
 javarob {
-    packageName = 'org.ligi.androidhelper'
+    packageName = 'org.ligi.tracedroid'
 }
 
 test {
