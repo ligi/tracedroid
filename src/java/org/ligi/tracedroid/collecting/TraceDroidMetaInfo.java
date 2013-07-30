@@ -72,7 +72,7 @@ public class TraceDroidMetaInfo {
 	}
 	
 	public static String getTraceDroidVersion() {
-		return "0.2";
+		return "1.0";
 		// TODO replace a thing like below - was only showing 0.0 on initial tests
 		//return TraceDroidMetaInfo.class.getPackage().getImplementationVersion();
 	}
