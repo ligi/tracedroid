@@ -52,6 +52,10 @@ public class TraceDroidMetaInfo {
         return app_packagename;
     }
 
+    public static String getExtra() {
+        return extra;
+    }
+
     public static String getTraceDroidVersion() {
         return "1.1";
         // TODO replace a thing like below - was only showing 0.0 on initial tests
