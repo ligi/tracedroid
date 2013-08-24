@@ -35,7 +35,8 @@ javarob {
 
 test {
     scanForTestClasses = false
-    include "**/*Test.class"
+    include "**/The*.class"
+    exclude '**/*$*' //exclude inner classes
 }
 
 repositories {
@@ -56,7 +57,8 @@ dependencies {
     testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4'
 
     provided group: 'com.google.android', name: 'android', version: '4.1.1.4'
-    testCompile group: 'org.robolectric', name: 'robolectric', version: '2.1'
+    testCompile group: 'org.robolectric', name: 'robolectric', version: '2.1.+'
+    testCompile group: 'com.google.android', name: 'android', version: '4.1.1.4'
 }
 
 sourceSets.main.compileClasspath += configurations.provided
