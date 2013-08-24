@@ -31,6 +31,14 @@ TraceDroid.init(this);
 TraceDroidEmailSender.sendStackTraces("your@email.org", this);
 ```
 
+if you want logs to be attached to the stacktrace you need to import the Log class from dtracedroid that way:
+
+```java
+import org.ligi.tracedroid.logging.Log;
+```
+
+and then use like you would use the android Log class
+
 license
 -------
 
