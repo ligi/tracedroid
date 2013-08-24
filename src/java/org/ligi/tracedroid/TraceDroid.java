@@ -50,8 +50,9 @@ public class TraceDroid {
         File trace_files_dir = new File(TraceDroidMetaInfo.getFilesPath());
 
         // Try to create the files folder if it doesn't exist
-        if (!trace_files_dir.exists())
+        if (!trace_files_dir.exists()) {
             trace_files_dir.mkdirs();
+        }
 
         return trace_files_dir;
     }
@@ -78,7 +79,7 @@ public class TraceDroid {
         String stack_trace_text = "";
         for (File act_file : getStackTraceFiles()) {
             // limit the number of stack traces
-            if (limit-- > 0)
+            if (limit-- > 0) {
                 try {
                     stack_trace_text += "file: " + act_file.toString();
                     stack_trace_text += System.getProperty("line.separator");
@@ -103,6 +104,7 @@ public class TraceDroid {
                 } catch (Exception e) {
                     Log.w("problem loading stacktrace", e);
                 }
+            }
         }
 
         return stack_trace_text;
