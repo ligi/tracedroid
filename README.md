@@ -26,10 +26,10 @@ how?
  - add the tracedroid.jar in your classpath
  - in your code add:
 
-  <pre><code>
+```java
 TraceDroid.init(this);
 TraceDroidEmailSender.sendStackTraces("your@email.org", this);
-  </code></pre>
+```
 
 license
 -------

@@ -1,6 +1,6 @@
 apply plugin : 'java-robolectric'
 apply plugin : 'idea'
-apply from : 'gradle/deploy.gradle'
+apply from : 'ci/deploy.gradle'
 
 buildscript {
   repositories {
