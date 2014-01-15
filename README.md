@@ -42,6 +42,21 @@ and then use like you would use the android Log class
 license
 -------
 
-Tracedroid is licensed with the MIT license ( http://opensource.org/licenses/MIT ) - in short: do what you want with it and it would be nice if you mention the author/project somwhere when you use it. WITHOUT WARRANTY OF ANY KIND
+This library is released under Apache 2 license. Feel free to use it. Pull requests are welcome.
+
+
+    Copyright 2013 ligi
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 [1]: http://code.google.com/p/android-remote-stacktrace/
