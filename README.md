@@ -1,5 +1,3 @@
-[![Build Status](https://ligi.ci.cloudbees.com/job/tracedroid/badge/icon)](https://ligi.ci.cloudbees.com/job/tracedroid/)
-
 tracedroid
 ==========
 
