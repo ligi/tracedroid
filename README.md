@@ -23,7 +23,16 @@ This work is inspired by [remote stacktrace for Android][1]. After looking at th
 how?
 ----
 
- - add the tracedroid.jar in your classpath
+ - either download [ ![Download](https://api.bintray.com/packages/ligi/maven/tracedroid/images/download.png) ](https://bintray.com/ligi/maven/tracedroid/_latestVersion)  and use it - or pull the lib via jcenter ( is like mavenCentral, but better ) - this is how you should do it via gradle::
+```groovy
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.ligi:tracedroid:0.12'
+}
+```
  - in your code add:
 
 ```java
