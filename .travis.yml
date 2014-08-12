@@ -1,0 +1,14 @@
+language: java
+
+branches:
+  only:
+    - dev
+    - master
+    - integration
+
+jdk: oraclejdk7
+
+notifications:
+  email: true
+
+
