@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.ligi:tracedroid:0.12'
+    compile 'org.ligi:tracedroid:1.4'
 }
 ```
  - in your code add:
