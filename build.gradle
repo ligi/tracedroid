@@ -4,7 +4,7 @@ apply from : 'ci/deploy.gradle'
 
 buildscript {
   repositories {
-    mavenCentral()
+    jcenter()
   }
   dependencies {
     classpath group: 'com.stanfy.android', name: 'gradle-plugin-java-robolectric', version: '2.0'
@@ -23,7 +23,7 @@ sourceSets {
     }
 }
 
-version = '1.1'
+version = '1.4'
 
 targetCompatibility = '1.6'
 sourceCompatibility = '1.6'
@@ -40,7 +40,7 @@ test {
 }
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 test {
