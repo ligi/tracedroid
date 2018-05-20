@@ -1,7 +1,6 @@
 apply plugin : 'java-robolectric'
 apply plugin : 'idea'
 apply plugin : 'maven'
-apply from : 'ci/deploy.gradle'
 
 group 'org.ligi'
 
