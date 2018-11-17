@@ -1,71 +1,19 @@
-apply plugin : 'java-robolectric'
-apply plugin : 'idea'
-apply plugin : 'maven'
-
-group 'org.ligi'
-
 buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath group: 'com.stanfy.android', name: 'gradle-plugin-java-robolectric', version: '2.0'
-  }
-}
-
-configurations {
-    provided
-}
-
-sourceSets {
-    main {
-        java {
-            srcDir 'src/java'
-        }
+    ext {
+        support_version = '27.1.1'
+        lib_version = '2.0'
+        lib_version_code = 20
     }
-}
-
-version = '1.4'
-
-targetCompatibility = '1.6'
-sourceCompatibility = '1.6'
-
-
-javarob {
-    packageName = 'org.ligi.tracedroid'
-}
-
-test {
-    scanForTestClasses = false
-    include "**/The*.class"
-    exclude '**/*$*' //exclude inner classes
-}
 
 repositories {
-    jcenter()
-}
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
 
-test {
-    afterTest { desc, result ->
-        println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
-
-dependencies {
-    provided group: 'com.google.android', name: 'android', version: '4.1.1.4'
-
-    testCompile group: 'junit', name: 'junit', version: '4.10'
-    testCompile group: 'org.mockito', name: 'mockito-core', version: '1.8.0'
-    testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4'
-    testCompile group: 'org.robolectric', name: 'robolectric', version: '2.1.+'
-    testCompile group: 'com.google.android', name: 'android', version: '4.1.1.4'
-}
-
-sourceSets.main.compileClasspath += configurations.provided
-
-idea {
-    module {
-        scopes .PROVIDED.plus += configurations.provided
-    }
-}
-

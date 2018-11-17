@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    jcenter()
+    maven { url 'https://maven.google.com' }
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 28
+        versionCode lib_version_code
+        versionName lib_version
+    }
+
+    task androidSourcesJar(type: Jar) {
+        from android.sourceSets.main.java.source
+        classifier = 'sources'
+    }
+
+    artifacts {
+        archives androidSourcesJar
+    }
+
+}
