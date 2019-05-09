@@ -7,7 +7,7 @@ repositories {
 
 dependencies {
     implementation project(":lib")
-    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 }
 
 android {
