@@ -13,7 +13,7 @@ public class TraceDroidEmailSender {
         if (TraceDroid.getStackTraceFiles().length > 0) {
             new androidx.appcompat.app.AlertDialog.Builder(context).setTitle("Problem Report")
 
-                                                                   .setMessage("A Problem with this App was detected - would you send an Crash-Report to help fixing this Problem?")
+                                                                   .setMessage("A Problem with this App was detected - do you want to send a Crash-Report to help fix this Problem?")
                                                                    .setPositiveButton("Send", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
