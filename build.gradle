@@ -15,5 +15,8 @@ repositories {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.36.0'
     }
 }
+
+apply from: 'https://raw.githubusercontent.com/ligi/gradle-common/master/versions_plugin_stable_only.gradle'
