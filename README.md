@@ -1,21 +1,20 @@
-tracedroid
+TraceDroid
 ==========
 
 why?
 ----
 
-This work is inspired by [remote stacktrace for Android][1]. After looking at the sourcecode i decided to do a total
- rewrite with these things in mind:
+This work is inspired by [remote stacktrace for Android][1]. After looking at the sourcecode I decided to do a total rewrite with these things in mind:
 
  - main: Option to send the trace in other ways - e.g. share via email - pros:
   1. no need for internet permission
-  2. having a email adress of the sender to contact the user after e.g. the bugfix
+  2. having an email address of the sender to contact the user after e.g. the bugfix
   3. no problem when there is no internet at the moment
   4. user is able to write some more info into the stacktrace mail
   5. no need for extra server backend
- - modularize ( diffrent send modules )
- - small core ( only collecting stacktraces to files - nothing else )
- - sending asyncronous to collecting - being able to send stacktraces when the user is more in the mood ( e.g. in wlan range )
+ - modularized ( different send modules )
+ - small ( only collecting StackTraces to files - nothing else )
+ - sending asynchronous to collecting - being able to send StackTraces when the user is more in the mood ( e.g. in wlan range )
  - attach Logging info
 
 how?
@@ -44,7 +43,7 @@ if you want logs to be attached to the stacktrace you need to import the Log cla
 import org.ligi.tracedroid.logging.Log;
 ```
 
-and then use like you would use the android Log class
+Then use like you would use the android Log class
 
 license
 -------
