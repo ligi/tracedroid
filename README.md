@@ -1,7 +1,7 @@
 TraceDroid
 ==========
 
-why?
+Why?
 ----
 
 This work is inspired by [remote stacktrace for Android][1]. After looking at the sourcecode I decided to do a total rewrite with these things in mind:
@@ -17,7 +17,7 @@ This work is inspired by [remote stacktrace for Android][1]. After looking at th
  - sending asynchronous to collecting - being able to send StackTraces when the user is more in the mood ( e.g. in wlan range )
  - attach Logging info
 
-how?
+How?
 ----
 
  - either download [ ![Download](https://api.bintray.com/packages/ligi/maven/tracedroid/images/download.png) ](https://bintray.com/ligi/maven/tracedroid/_latestVersion)  and use it - or pull the lib via jcenter ( is like mavenCentral, but better ) - this is how you should do it via gradle:
@@ -45,13 +45,13 @@ import org.ligi.tracedroid.logging.Log;
 
 Then use like you would use the android Log class
 
-license
+License
 -------
 
 This library is released under Apache 2 license. Feel free to use it. Pull requests are welcome.
 
 
-    Copyright 2013 ligi
+    Copyright 2013-2021 ligi
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
