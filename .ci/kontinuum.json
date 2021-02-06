@@ -1,4 +1,4 @@
 {
 "type":"library",
-"stages":["test","lint","build"]
+"stages":[{"name":"test"},{"name":"lint"},{"name":"build"}]
 }
