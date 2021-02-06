@@ -20,24 +20,16 @@ This work is inspired by [remote stacktrace for Android][1]. After looking at th
 How?
 ----
 
- - either download [ ![Download](https://api.bintray.com/packages/ligi/maven/tracedroid/images/download.png) ](https://bintray.com/ligi/maven/tracedroid/_latestVersion)  and use it - or pull the lib via jcenter ( is like mavenCentral, but better ) - this is how you should do it via gradle:
-```groovy
-repositories {
-    jcenter()
-}
-
-dependencies {
-    compile 'org.ligi:tracedroid:1.4'
-}
-```
- - in your code add:
+Get it via JitPack (see: [![](https://jitpack.io/v/ligi/tracedroid.svg)](https://jitpack.io/#ligi/tracedroid))
+ 
+Then in your code add:
 
 ```java
 TraceDroid.init(this);
 TraceDroidEmailSender.sendStackTraces("your@email.org", this);
 ```
 
-if you want logs to be attached to the stacktrace you need to import the Log class from dtracedroid that way:
+if you want logs to be attached to the stacktrace you need to import the Log class from tracedroid that way:
 
 ```java
 import org.ligi.tracedroid.logging.Log;
