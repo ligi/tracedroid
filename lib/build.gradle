@@ -13,6 +13,7 @@ android {
         targetSdkVersion 30
         versionCode lib_version_code
         versionName lib_version
+        buildConfigField("String","TraceDroidVersion","\"" + versionName + "\"")
     }
 
     task androidSourcesJar(type: Jar) {
@@ -23,5 +24,4 @@ android {
     artifacts {
         archives androidSourcesJar
     }
-
 }

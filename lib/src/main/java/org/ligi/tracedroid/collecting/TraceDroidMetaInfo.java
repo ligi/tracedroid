@@ -3,6 +3,7 @@ package org.ligi.tracedroid.collecting;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import org.ligi.tracedroid.BuildConfig;
 
 public class TraceDroidMetaInfo {
 
@@ -57,8 +58,6 @@ public class TraceDroidMetaInfo {
     }
 
     public static String getTraceDroidVersion() {
-        return "1.1";
-        // TODO replace a thing like below - was only showing 0.0 on initial tests
-        //return TraceDroidMetaInfo.class.getPackage().getImplementationVersion();
+        return BuildConfig.TraceDroidVersion;
     }
 }
