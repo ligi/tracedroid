@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 repositories {
     jcenter()
@@ -24,4 +25,12 @@ android {
     artifacts {
         archives androidSourcesJar
     }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation "com.google.truth:truth:1.1.2"
 }

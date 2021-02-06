@@ -22,20 +22,14 @@ How?
 
 Get it via JitPack (see: [![](https://jitpack.io/v/ligi/tracedroid.svg)](https://jitpack.io/#ligi/tracedroid))
  
-Then in your code add:
+Then in your code (e.g. in the Application onCreate) add:
 
 ```java
-TraceDroid.init(this);
-TraceDroidEmailSender.sendStackTraces("your@email.org", this);
+TraceDroid.init(this); // passing Application Context
+sendTraceDroidStackTracesIfExist("your@email.org", this);
 ```
 
-if you want logs to be attached to the stacktrace you need to import the Log class from tracedroid that way:
-
-```java
-import org.ligi.tracedroid.logging.Log;
-```
-
-Then use like you would use the android Log class
+if you want logs to be attached to the stacktrace you need to log via [Timber](https://github.com/JakeWharton/timber)
 
 License
 -------
