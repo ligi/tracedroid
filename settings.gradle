@@ -1,2 +1,3 @@
+include ':demo'
 include ':lib'
 include ':supportemail'
