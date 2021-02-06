@@ -76,13 +76,13 @@ public class TraceDroid {
     public static String getStackTraceText(int limit) {
         Log.d("Searching Exceptions in: " + TraceDroidMetaInfo.getFilesPath());
 
-        String stack_trace_text = "";
+        StringBuilder stack_trace_text = new StringBuilder();
         for (File act_file : getStackTraceFiles()) {
             // limit the number of stack traces
             if (limit-- > 0) {
                 try {
-                    stack_trace_text += "file: " + act_file.toString();
-                    stack_trace_text += System.getProperty("line.separator");
+                    stack_trace_text.append("file: ").append(act_file.toString());
+                    stack_trace_text.append(System.getProperty("line.separator"));
 
                     if (limit-- > 0) {
                         // Read contents of stacktrace file
@@ -91,15 +91,14 @@ public class TraceDroid {
                         try {
                             String line = null;
                             while ((line = input.readLine()) != null) {
-                                stack_trace_text += line;
-                                stack_trace_text += System
-                                        .getProperty("line.separator");
+                                stack_trace_text.append(line);
+                                stack_trace_text.append(System.getProperty("line.separator"));
                             }
                         } finally {
                             input.close();
                         }
                     } else
-                        stack_trace_text += " discarded by limit";
+                        stack_trace_text.append(" discarded by limit");
 
                 } catch (Exception e) {
                     Log.w("problem loading stacktrace", e);
@@ -107,7 +106,7 @@ public class TraceDroid {
             }
         }
 
-        return stack_trace_text;
+        return stack_trace_text.toString();
     }
 
     public final static void deleteStacktraceFiles() {
