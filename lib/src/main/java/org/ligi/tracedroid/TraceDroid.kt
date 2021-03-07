@@ -14,6 +14,8 @@ import java.io.FilenameFilter
 object TraceDroid {
 
     lateinit var traceDroidMetaInfo: TraceDroidMetaInfo
+
+    private val bufferedLogTree by lazy { BufferedLogTree() }
     /**
      * registers a UncaughtException handler which saves the stacktrace with
      * some meta-information to the filesystem
@@ -23,7 +25,7 @@ object TraceDroid {
     fun init(context: Context) {
 
         traceDroidMetaInfo = createMetaInfo(context)
-        val bufferedLogTree = BufferedLogTree()
+
         Timber.plant(bufferedLogTree)
         // get the current handler
         val currentHandler = Thread.getDefaultUncaughtExceptionHandler()
@@ -95,6 +97,8 @@ object TraceDroid {
         }
         return stackTraceText.toString()
     }
+
+    fun getLog() = bufferedLogTree.buffer
 
     fun deleteStacktraceFiles() {
         for (act_file in stackTraceFiles) {
