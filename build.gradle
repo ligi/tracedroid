@@ -1,8 +1,8 @@
 buildscript {
     ext.kotlin_version = '1.4.31'
     ext {
-        lib_version = '4.0'
-        lib_version_code = 40
+        lib_version = '4.1'
+        lib_version_code = 41
     }
 
 repositories {
