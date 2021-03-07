@@ -8,6 +8,7 @@ buildscript {
 repositories {
         jcenter()
         google()
+        gradlePluginPortal()
         maven { url "https://jitpack.io" }
         maven { url "https://kotlin.bintray.com/kotlinx" }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
@@ -15,7 +16,7 @@ repositories {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.2'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.36.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.38.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
